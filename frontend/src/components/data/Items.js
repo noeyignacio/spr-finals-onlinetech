@@ -31,19 +31,19 @@ class Items extends Component {
             </Col>
             <Col md={4} className="d-none d-lg-block">
               <ul className="list-group">
-                <a href="#">
+                <Link to={`/genreBoard/${genre.genreIdentifier}`}>
                   <li className="list-group-item board">
                     <span className="text-info">
                       <FontAwesomeIcon icon={faBook} className="fa-fw" />
                       Books
                     </span>
                   </li>
-                </a>
+                </Link>
                 <Link to={`/updateGenre/${genre.genreIdentifier}`}>
                   <li className="list-group-item update">
                     <span className="text-success">
                       <FontAwesomeIcon icon={faEdit} className="fa-fw" />
-                      Update Project Info
+                      Update Book Info
                     </span>
                   </li>
                 </Link>
@@ -53,7 +53,7 @@ class Items extends Component {
                 >
                   <span className="text-danger">
                     <FontAwesomeIcon icon={faTrash} className="fa-fw" />
-                    Delete Project
+                    Delete Book?
                   </span>
                 </li>
               </ul>

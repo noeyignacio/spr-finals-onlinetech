@@ -3,7 +3,7 @@ import { GET_ERRORS, GET_GENRES, GET_GENRE, DELETE_GENRE } from "./types";
 
 export const createGenre = (genre, history) => async dispatch => {
   try {
-    const res = await axios.post("/api/genre", genre);
+    await axios.post("/api/genre", genre);
     history.push("/");
     dispatch({
       type: GET_ERRORS,

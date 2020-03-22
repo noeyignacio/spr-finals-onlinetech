@@ -37,9 +37,9 @@ public class BookService {
             book.setGenreSequence(backlog.getGenreIdentifier()+"-"+BacklogSequence);
             book.setGenreIdentifier(genreIdentifier);
 
-            if(book.getBookPriority() == null){
-                book.setBookPriority(3);
-            }
+//            if(book.getBookPriority() == 0 || book.getBookPriority() == null){
+//                book.setBookPriority(3);
+//            }
 
             if(book.getBookStatus() == "" || book.getBookStatus() == null ) {
                 book.setBookStatus("READING..");

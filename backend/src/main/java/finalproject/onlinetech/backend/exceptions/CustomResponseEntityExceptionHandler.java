@@ -23,4 +23,10 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
         GenreNotFoundExceptionResponse genreNotFoundExceptionResponse = new GenreNotFoundExceptionResponse(ex.getMessage());
         return new ResponseEntity(genreNotFoundExceptionResponse, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler
+    public final ResponseEntity<Object> handleUsernameAlreadyExist(UsernameAlreadyExistException ex, WebRequest request) {
+        UsernameAlreadyExistExceptionResponse usernameAlreadyExistExceptionResponse = new UsernameAlreadyExistExceptionResponse(ex.getMessage());
+        return new ResponseEntity(usernameAlreadyExistExceptionResponse, HttpStatus.BAD_REQUEST);
+    }
 }
